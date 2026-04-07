@@ -1,0 +1,48 @@
+html,body {
+  margin: 0;
+  padding: 0;
+}
+
+.border-line {
+  border: 3px solid #DE473C;
+}
+
+.red {
+  color: #DE473C;
+}
+
+.blue {
+  background-color: #043171;
+}
+
+.test-bg {
+  background-color: black;
+}
+
+.button-blue {
+  color: #0056AF
+}
+
+.guide-blue {
+  color: #43A7B7;
+}
+
+.white {
+  color: #FFFFFF;
+}
+
+.font-normal {
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.link-none {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.flex {
+  display: flex;
+}
