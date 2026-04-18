@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -6,25 +7,41 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-  <title>Home Page</title>
+  <script src="https://kit.fontawesome.com/456adb4b31.js" crossorigin="anonymous"></script>
+  <title>Richfield Connect</title>
 </head>
 <body>
-  <nav class="border-line blue flex">
-    <div>
-      <img src="./images/logo.png" alt="Logo" class="logo">
+  <section class="height- width-100 blue-bg white flex flex-column justify-center align-center text-center font-normal border-bottom">
+    <h1 class="font-xxl font-800 mb-1">Welcome to Richfield Connect</h1>
+    <p class="font-md mb-1">Your academic social platform to connect, collaborate, and succeed.</p>
+    <button class="flex button-style-1 p-10 border-radius-5 border-white border-width button-width button-height align-item-center justify-center mb-2 font-normal font-md font-600 white" type="button" onclick="loadContent('signup')">Get Started</button>
+  </section>
+
+  <section class="flex flex-column justify-center align-center p-10 height-75 font-normal">
+    <img src="./images/logo.png" alt="logo" class="blue-bg border-radius-10 border-red">
+    <h2 class="font-xl font-600 text-center mb-1 red">Why Use Richfield Connect?</h2>
+    <div class="flex justify-center mt-2">
+      <div class="feature-item flex-column align-center width-box p-10">
+        <div class="width-box-4 height-box blue-bg border-red flex justify-center align-center white border-radius-5 mb-1"><i class="fa-solid fa-id-card font-xxl"></i></div>
+        <h3 class="font-lg red">Create Your Academic Profile</h3>
+        <p class="font-md red">Showcase your academic journey and connect with peers.</p>
+      </div>
+      <div class="feature-item flex-column align-center width-box p-10">
+        <div class="width-box-4 height-box blue-bg border-red flex justify-center align-center white border-radius-5 mb-1"><i class="fa-brands fa-kakao-talk font-xxl"></i></div>
+        <h3 class="font-lg red">Share Ideas</h3>
+        <p class="font-md red">Post updates, share ideas, and engage with the student community.</p>
+      </div>
+      <div class="feature-item flex-column align-center width-box p-10">
+        <div class="width-box-4 height-box blue-bg border-red flex justify-center align-center white border-radius-5 mb-1"><i class="fa-solid fa-people-arrows font-xxl"></i></div>
+        <h3 class="font-lg red">Build Your Network</h3>
+        <p class="font-md red">Collaborate with like-minded students and grow your academic network.</p>
+      </div>
     </div>
-    <div>
-      <ul class="flex">
-        <li class="link-none white"><a href="index.html" class="white link-none font-normal">Home</a></li>
-        <li class="link-none white"><a href="Feed.html" class="white link-none font-normal">Feed</a></li>
-        <li class="link-none white"><a href="Profile.html" class="white link-none font-normal">Profile</a></li>
-        <li class="link-none white"><a href="About.html" class="white link-none font-normal">About</a></li>
-        <li class="link-none white"><a href="SignUp.html" class="white link-none font-normal">Sign Up</a></li>
-      </ul>
-    </div>
-  </nav>
-  <div id="content"></div> <!-- Placeholder for dynamic content content -->
+  </section>
+  <footer class="flex pl-10 white font-normal font-s align-center blue-bg border-top">
+    <p>&copy; 2026 Richfield Connect. All rights reserved.</p>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
 </body>
-<link href="script.js" rel="script">
-<link href="jquery.js" rel="script">
 </html>

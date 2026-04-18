@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -6,18 +7,38 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/456adb4b31.js" crossorigin="anonymous"></script>
   <title>Feed Page</title>
 </head>
 <body>
-  <div class="">
-    <button>Create Post</button>
-    <button>Delete Post</button>
-    <button>Like</button>
-    <p>post here</p>
-    <p>date time stamp</p>
-    <textarea type="text" placeholder="Comment here">
-  </div>
+  <main class="font-normal p-10 flex justify-center align-center height-100 flex-column">
+    <!-- CREATE POST FORM -->
+    <div class="flex flex-column align-center gap-30 width-100">
+      <h2 class="font-xxl font-800 red font-underline">What's on your mind?</h2>
+      <form id="postForm" class="flex flex-column align-center gap-15 width-60">
+        <textarea 
+          id="postContent" 
+          class="p-input border-radius-5 width-60 guide-blue font-s font-normal" 
+          rows="4" 
+          placeholder="Share your thoughts, ideas, or academic updates..."
+          required
+        ></textarea>
+        <div class="width-60 justify-start">
+          <button type="submit" class="font-normal flex space-around align-center white font-600 border-white border-radius-5 button-width-2 button-height border-radius-5 white font-md button-style-1">
+            <i class="fa-solid fa-paper-plane"></i> Post
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- POSTS CONTAINER -->
+    <div id="postsContainer" class="flex align-center flex-column gap-15 width-100">
+      <!-- Posts dynamically added here -->
+      <p class="empty-placeholder font-md font-normal guide-blue">No posts yet. Create one above! 👆</p>
+    </div>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
 </body>
-<link href="script.js" rel="script">
-<link href="jquery.js" rel="script">
 </html>

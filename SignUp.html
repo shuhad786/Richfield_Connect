@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -9,8 +10,92 @@
 	<title>Sign Up Page</title>
 </head>
 <body>
-	
+  <div class="blue-bg white flex flex-column justify-center align-center height-100 width-100 font-normal">
+    <img src="./images/logo.png" alt="Richfield Connect Logo" class="logo">
+    <h1>Create Your Account</h1>
+    <p class="">Join Richfield Connect today</p>
+    
+    <form id="signupForm" novalidate>
+      <!-- Full Name -->
+      <div class="flex align-center mb-1 gap-1">
+        <label class="width-box-3 flex-shrink font-600 text-right pr-10" for="fullName">Full Name <span class="red">*</span></label>
+        <input class="border-radius-5 border-red input-width p-input" type="text" id="fullName" name="fullName" required>
+        <span class="error-message" id="fullNameError"></span>
+      </div>
+
+      <!-- Student Number -->
+      <div class=" flex align-center mb-1 gap-1">
+        <label class="width-box-3 flex-shrink font-600 text-right pr-10 for="studentNumber">Student Number <span class="red">*</span></label>
+        <input class="border-radius-5 border-red input-width p-input" type="text" id="studentNumber" name="studentNumber" required>
+        <span class="error-message" id="studentNumberError"></span>
+      </div>
+
+      <!-- Campus / DL -->
+      <div class="flex align-center mb-1 gap-1">
+        <label class="width-box-3 flex-shrink font-600 text-right pr-10" for="campus">Campus / DL <span class="red">*</span></label>
+        <select class="border-radius-5 border-red input-width p-input" id="campus" name="campus" required>
+          <option value="">Select Campus</option>
+          <option value="Johannesburg">Johannesburg</option>
+          <option value="Pretoria">Pretoria</option>
+          <option value="Online">Online</option>
+        </select>
+        <span class="error-message" id="campusError"></span>
+      </div>
+
+      <!-- Email Address -->
+      <div class="flex align-center mb-1 gap-1">
+        <label class="width-box-3 flex-shrink font-600 text-right pr-10 for="email">Email Address <span class="red">*</span></label>
+        <input class="border-radius-5 border-red input-width p-input" type="email" id="email" name="email" required>
+        <span class="error-message" id="emailError"></span>
+      </div>
+
+      <!-- Password -->
+      <div class="flex align-center mb-1 gap-1">
+        <label class="width-box-3 flex-shrink font-600 text-right pr-10 for="password">Password <span class="red">*</span></label>
+        <input class="border-radius-5 border-red input-width p-input" type="password" id="password" name="password" required>
+        <span class="error-message" id="passwordError"></span>
+      </div>
+
+      <!-- Interests -->
+      <div>
+        <label class="mt-1">Interests <span class="red">*</span></label>
+        <div class="flex space-evenly gap-1 mt-2 mb-1">
+          <label class="flex align-center gap-1 font-s">
+            <input type="checkbox" class="checkbox-input" name="interests" value="Sports"> Sports
+          </label>
+          <label class="flex align-center gap-1 font-s">
+            <input type="checkbox" class="checkbox-input" name="interests" value="Technology"> Technology
+          </label>
+          <label class="flex align-center gap-1 font-s">
+            <input type="checkbox" class="checkbox-input" name="interests" value="Arts"> Arts
+          </label>
+          <label class="flex align-center gap-1 font-s">
+            <input type="checkbox" class="checkbox-input" name="interests" value="Music"> Music
+          </label>
+          <label class="flex align-center gap-1 font-s">
+            <input type="checkbox" class="checkbox-input" name="interests" value="Business"> Business
+          </label>
+        </div>
+        <span class="error-message" id="interestsError"></span>
+      </div>
+
+      <!-- Short Bio -->
+      <div class=" flex flex-column align-center">
+        <label class="mb-1 font-s" for="bio">Short Bio (max 200 words) <span class="red">*</span></label>
+        <textarea class="border-radius-5 border-red width-box-2 align-start" id="bio" name="bio" rows="8" required></textarea>
+        <span class="font-s font-normal align-end ml-auto"><span id="bioCharCount">0</span>/200</span>
+        <span class="error-message" id="bioError"></span>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="flex justify-center"><button type="submit" class="red-bg white font-normal font-lg button-height button-width border-white border-radius-5">Create Account</button></div>
+
+      <!-- Link to Login -->
+      <div class="flex justify-center"><p class="font-s">Already have an account? <a class="red font-normal" href="index.html">Return to Home</a></p></div>
+    </form>
+
+  </div>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="script.js"></script>
 </body>
-<link href="script.js" rel="script">
-<link href="jquery.js" rel="script">
 </html>

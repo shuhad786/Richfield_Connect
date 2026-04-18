@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <title>Home Page</title>
+</head>
+<body>
+  <nav class="blue-bg flex space-around align-center p-10 white font-normal border-bottom">
+    <div>
+      <img src="./images/logo.png" alt="Logo" class="logo">
+    </div>
+    <h1 class="font-normal font-800 font-xxl font-underline red">RICHFIELD CONNECT</h1>
+    <ul class="flex space-evenly gap-1 link-none pr-10 width-box">
+      <li class="link-style-1 link-none"><a href="#" data-page="home" class="white link-none font-normal font-lg">Home</a></li>
+      <li class="link-style-1 link-none"><a href="#" data-page="feed" class="white link-none font-normal font-lg">Feed</a></li>
+      <li class="link-style-1 link-none"><a href="#" data-page="profile" class="white link-none font-normal font-lg">Profile</a></li>
+      <li class="link-style-1 link-none"><a href="#" data-page="about" class="white link-none font-normal font-lg">About</a></li>
+    </ul>
+  </nav>
+
+  <div id="welcomeMessage" class="display-none font-normal flex justify-center align-center flex-column gap-10">
+    <h1 class="button-blue font-xxl">Welcome to Richfield Connect!</h1>
+    <h2 class="red font-xxl">Hey there,</h2>
+    <div class="flex align-center width-box-2 justify-center">  
+      <h2>✨🎓</h2>
+      <h2 class="UserName guide-blue font-xl"></h2>
+      <h2>🎓✨</h2>
+    </div>
+
+    <p class="font-md guide-blue width-box-2 text-center">
+      We're thrilled to have you here. Richfield Connect is your go-to social hub where students like you come together to share ideas, showcase talents, stay updated on school events, and build a vibrant community. Whether you're posting your latest project, joining a discussion, or just looking to connect with friends, you're in the right place.
+
+      Dive in, be yourself, and make the most of this exciting space. Remember — your voice matters, and we're here to support your journey every step of the way.
+
+      Happy connecting! 🚀🌟
+    </p>
+  </div>
+
+  <div id="content" class="p-10"></div>
+  
+  <footer class="flex pl-10 white font-normal font-s align-center blue-bg border-top">
+    <p>&copy; 2026 Richfield Connect. All rights reserved.</p>
+  </footer>
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
