@@ -462,3 +462,7 @@ function displayAvatarInitials(fullName) {
 
   $('#avatarInitials').text(initials);
 }
+
+$(document).on('click', '.menu-toggle', function() {
+  $('nav ul').toggleClass('show');
+});

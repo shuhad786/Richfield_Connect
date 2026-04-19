@@ -550,3 +550,271 @@ footer {
   border-radius: 8px;
   padding: 4px;
 }
+
+.mobile-nav {
+  display: none; /* Hidden on larger screens */
+  flex-direction: column;
+  background-color: #043171;
+  padding: 10px;
+}
+
+
+@media (max-width: 770px) {
+  .navbar {
+    display: none; /* Hide the desktop navbar */
+  }
+
+  .mobile-nav {
+    display: flex;
+   
+  }
+
+  .nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    max-width: 170px;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  nav ul.show {
+    display: flex;
+    text-decoration: none;
+    list-style-type: none;
+    color: white;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    list-style-type: none;
+    color: white;
+  }
+
+  /* Welcome message text size */
+  #welcomeMessage h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  #welcomeMessage h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  /* Feature items in about section */
+  .feature-item {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Post container adjustments */
+  #postsContainer {
+    width: 100%;
+  }
+
+  /* Post text size */
+   .post {
+    padding: 0.75rem;
+    font-size: 1em;
+    gap: 0.5rem;
+  }
+
+  /* Optional: stack header elements vertically if needed */
+  .post-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.7em;
+  }
+
+  .post-content {
+    font-size: 0.7em;
+  }
+
+  .like-btn, .delete-btn {
+    font-size: 0.8em;
+    padding: 10px, 4px;
+  }
+
+  /* Buttons */
+  .button-width, .button-height {
+    width: 100%;
+  }
+
+  /* Profile layout, if needed */
+  .profile-container {
+    padding: 1rem;
+  }
+
+  /* Profile header flex direction */
+  .profile-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Profile avatar size */
+  .profile-avatar {
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+  }
+
+  #profileFullName {
+    font-size: 1.5rem;
+  }
+
+  .detail-section {
+    padding: 1rem;
+  }
+
+  .menu-toggle {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 1024px) {
+  /* Adjust nav for tablets */
+  .font-xxl {
+    font-size: 2rem;
+  }
+
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  /* Logo size on tablet */
+  .logo {
+    max-width: 200px;
+  }
+
+  /* Profile container */
+  .profile-container {
+    padding: 1.5rem;
+  }
+
+  /* Profile header changes */
+  .profile-header {
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  /* Profile avatar size */
+  .profile-avatar {
+    width: 100px;
+    height: 100px;
+    font-size: 2.4rem;
+  }
+
+  /* Profile name size */
+  #profileFullName {
+    font-size: 2rem;
+  }
+
+  /* Post container width */
+  #postsContainer {
+    width: 100%;
+  }
+
+  /* Post font size */
+  .post {
+    font-size: 1em;
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+
+  .post-header {
+    gap: 0.5rem;
+  }
+
+  /* Welcome message text size */
+  #welcomeMessage h1 {
+    font-size: 2.5rem;
+  }
+
+  #welcomeMessage h2 {
+    font-size: 2rem;
+  }
+
+  /* Adjust feature grid layout if needed */
+  .features-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Adjust feature items width */
+  .feature-item {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 1440px) {
+  /* Navigation adjustments */
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  /* Logo size on larger screens */
+  .logo {
+    max-width: 250px;
+  }
+
+  /* Profile container padding */
+  .profile-container {
+    padding: 2rem;
+  }
+
+  /* Profile header layout */
+  .profile-header {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  /* Profile avatar size */
+  .profile-avatar {
+    width: 110px;
+    height: 110px;
+    font-size: 2.4rem;
+  }
+
+  /* Profile name size */
+  #profileFullName {
+    font-size: 2.2rem;
+  }
+
+  /* Post container width */
+  #postsContainer {
+    width: 100%;
+  }
+
+  /* Post font size */
+  .post {
+    font-size: 1.2em;
+  }
+
+  /* Welcome message text size */
+  #welcomeMessage h1 {
+    font-size: 3rem;
+  }
+
+  #welcomeMessage h2 {
+    font-size: 2rem;
+  }
+}

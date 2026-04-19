@@ -10,16 +10,29 @@
   <title>Home Page</title>
 </head>
 <body>
-  <nav class="blue-bg flex space-around align-center p-10 white font-normal border-bottom">
+  <nav class="navbar blue-bg flex space-around align-center p-10 white font-normal border-bottom">
     <div>
       <img src="./images/logo.png" alt="Logo" class="logo">
     </div>
-    <h1 class="font-normal font-800 font-xxl font-underline red">RICHFIELD CONNECT</h1>
+    <h1 class="navbar-head font-normal font-800 font-xxl font-underline red">RICHFIELD CONNECT</h1>
     <ul class="flex space-evenly gap-1 link-none pr-10 width-box">
       <li class="link-style-1 link-none"><a href="#" data-page="home" class="white link-none font-normal font-lg">Home</a></li>
       <li class="link-style-1 link-none"><a href="#" data-page="feed" class="white link-none font-normal font-lg">Feed</a></li>
       <li class="link-style-1 link-none"><a href="#" data-page="profile" class="white link-none font-normal font-lg">Profile</a></li>
       <li class="link-style-1 link-none"><a href="#" data-page="about" class="white link-none font-normal font-lg">About</a></li>
+    </ul>
+  </nav>
+
+  <nav class="mobile-nav">
+    <div class="nav-header">
+      <img src="./images/logo.png" alt="Logo" class="logo">
+      <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+    </div>
+    <ul class="nav-links hidden font-normal">
+      <li><a href="#" data-page="home">Home</a></li>
+      <li><a href="#" data-page="feed">Feed</a></li>
+      <li><a href="#" data-page="profile">Profile</a></li>
+      <li><a href="#" data-page="about">About</a></li>
     </ul>
   </nav>
 
