@@ -32,21 +32,18 @@
     initializeFeed();
   }
 
-  $(document).ready(function() {
   // Load user profile from localStorage
-    const userProfileJSON = localStorage.getItem('userProfile');
-    if (userProfileJSON) {
-      try {
-        const profile = JSON.parse(userProfileJSON);
-        const fullName = profile.fullName;
-        // Replace the placeholder with the user's full name
-        $('h2.UserName').text(fullName);
-      } catch (error) {
-        console.error('Error parsing user profile:', error);
-      }
+  const userProfileJSON = localStorage.getItem('userProfile');
+  if (userProfileJSON) {
+    try {
+      const profile = JSON.parse(userProfileJSON);
+      const fullName = profile.fullName;
+      // Replace the placeholder with the user's full name
+      $('h2.UserName').text(fullName);
+    } catch (error) {
+      console.error('Error parsing user profile:', error);
     }
-  });
-
+  };
 });
 
 function loadContent(page) {
@@ -94,51 +91,6 @@ function showWelcome() {
 function initializeSignUp() {
   if (!$('#signupForm').length) return;
 
-  // Initially hide the live preview
-  if ($('#livePreview').length) $('#livePreview').hide();
-
-  // Character count for bio (now word count)
-  $('#bio').on('input', function () {
-    const text = $(this).val().trim();
-    const wordCount = text ? text.split(/\s+/).length : 0;
-    $('#bioCharCount').text(wordCount);
-  });
-
-  // Live Profile Preview (jQuery) - show preview dynamically
-  if ($('#previewName').length) {
-    $('#fullName').on('input', function() {
-      const val = $(this).val();
-      $('#previewName').fadeOut(200, function() {
-        $(this).text(val).fadeIn(200);
-      });
-      if (val && $('#livePreview').is(':hidden')) {
-        $('#livePreview').slideDown(300);
-      }
-    });
-  }
-
-  if ($('#previewBio').length) {
-    $('#bio').on('input', function() {
-      const val = $(this).val();
-      $('#previewBio').fadeOut(200, function() {
-        $(this).text(val).fadeIn(200);
-      });
-      if (val && $('#livePreview').is(':hidden')) {
-        $('#livePreview').slideDown(300);
-      }
-    });
-  }
-
-  if ($('input[name="interests"]').length) {
-    $('input[name="interests"]').on('change', function() {
-      updatePreviewInterests();
-      const interests = getSelectedInterests();
-      if (interests.length > 0 && $('#livePreview').is(':hidden')) {
-        $('#livePreview').slideDown(300);
-      }
-    });
-  }
-
   // Form submission
   $('#signupForm').on('submit', function (e) {
     e.preventDefault(); // Prevent default form submission
@@ -165,14 +117,6 @@ function initializeSignUp() {
       // Redirect to home
       window.location.href = 'Home.html';
     }
-  });
-}
-
-function updatePreviewInterests() {
-  const interests = getSelectedInterests();
-  $('#previewInterests').empty();
-  interests.forEach(interest => {
-    $('#previewInterests').append('<span class="interest-tag">' + interest + '</span>');
   });
 }
 
@@ -368,10 +312,6 @@ function displayProfileData(profile) {
   displayAvatarInitials(profile.fullName);
 }
 
-function displayProfileName(profile) {
-  $('#profileFullName').text(profile.fullName);
-}
-
 function loadProfileFromStorage() {
   const userProfileJSON = localStorage.getItem('userProfile');
 
@@ -384,14 +324,12 @@ function loadProfileFromStorage() {
 
   try {
     const userProfile = JSON.parse(userProfileJSON);
-    if (!$('#profileFullName').length) {
-      console.warn('Profile page content not found in #content. Rendering fallback profile view.');
-      $('#content').html(renderProfileTemplate());
-    }
-    displayProfileData(userProfile);
+      displayProfileData(userProfile);
   } catch (error) {
     console.error('Error parsing user profile:', error);
-    $('#content').html('<p>Unable to load profile data. Please refresh or sign up again.</p>');
+    $('#content').html(
+      '<p>Unable to load profile data. Please refresh or sign up again.</p>'
+    );
   }
 }
 
